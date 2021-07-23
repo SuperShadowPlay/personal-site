@@ -8,14 +8,18 @@ export default new Vuetify({
         themes: {
             light:
             {
-                primary: '#4caf50',
+                primary: '#16b26a',
                 secondary: '#009688',
-                accent: '#03a9f4',
+                accent: '#6916b2',
+                accent2: '165fb2',
                 error: '#f44336',
                 warning: '#ffc107',
                 info: '#607d8b',
                 success: '#cddc39'
             },
         },
+        options: {
+            customProperties: true
+        }
     }
 });

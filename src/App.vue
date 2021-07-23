@@ -1,31 +1,25 @@
 <template>
-  <v-app>
-  <div id="app">
-    <Links/>
-  </div>
+  <v-app id="app">
+    <Topbar/>
+    <h1>what's up</h1>
   </v-app>
 </template>
 
 <script>
-import Links from './components/Links.vue'
+import Topbar from './components/Topbar.vue'
 
 export default {
   name: 'App',
   components: {
-    Links
+    Topbar
+  },
+  metaInfo: {
+    title: "Trevor's Webspace"
   }
 }
 </script>
 
 <style>
-:root {
-  --primary: #16b26a;
-  --complimentary: #b2165f;
-  --extra-green: #16b21b;
-  --extra-blue: #16adb2;
-  --outthere-blue: #165fb2;
-  --outthere-purple: #6916b2;
-}
 #app {
   font-family: "Roboto";
   font-weight: 400;
