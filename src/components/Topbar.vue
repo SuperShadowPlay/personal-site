@@ -1,6 +1,6 @@
 <template>
   <v-card>
-    <v-toolbar color="primary" class="mx-auto overflow-hidden" extend app>
+    <v-toolbar color="primary" class="mx-auto overflow-hidden" flat extend app>
       <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
       <v-toolbar-title color=secondary> Trevor's Webspace </v-toolbar-title>
       <v-spacer></v-spacer>
