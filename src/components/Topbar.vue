@@ -12,12 +12,12 @@
     <v-navigation-drawer v-model="drawer" color="white" app temporary>
       <v-list nav dense>
         <v-list-item-group v-model="group" active-class="deep-purple--text text--accent-4">
-          <v-list-item>
+          <v-list-item @click="drawerClick('https://www.youtube.com/user/SuperShadowP1ay/')">
             <img src="../assets/youtube-icon.svg" class="icons">
             <v-list-item-title>YouTube</v-list-item-title>
           </v-list-item>
 
-          <v-list-item>
+          <v-list-item @click="drawerClick('https://github.com/SuperShadowPlay')">
             <img src="../assets/github-icon.svg" class="icons"> <br>
             <v-list-item-title>GitHub</v-list-item-title>
           </v-list-item>
@@ -31,8 +31,8 @@
 export default {
   name: 'Topbar',
   methods: {
-    navBarClick(link) {
-      alert(link);
+    drawerClick: function (link) {
+      window.location.href = link;
     },
   },
   data: () => ({
