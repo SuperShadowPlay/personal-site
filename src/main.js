@@ -4,8 +4,8 @@ import vuetify from './plugins/vuetify'
 import VueMeta from 'vue-meta'
 import VueRouter from 'vue-router'
 
-import Home from './views/Home.vue'
-import About from './views/About.vue'
+const Home = () => import('./views/Home.vue')
+const About = () => import('./views/About.vue')
 
 Vue.use(VueMeta);
 Vue.use(VueRouter);

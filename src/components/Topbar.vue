@@ -1,16 +1,17 @@
 <template>
   <v-card>
-    <v-toolbar color="primary" class="mx-auto overflow-hidden rounded-0" flat extend>
+    <v-app-bar color="primary" class="mx-auto overflow-hidden rounded-0"
+    elevate-on-scroll extend>
       <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
       <v-toolbar-title color=secondary> Trevor's Webspace </v-toolbar-title>
-    </v-toolbar>
+    </v-app-bar>
 
     <v-navigation-drawer v-model="drawer" color="white" app temporary>
       <v-list nav dense>
         <v-list-item-group v-model="group" active-class="deep-purple--text text--accent-4">
           
           <div class="link-list" v-for="link in links" :key="link.name">
-            <router-link :to="link.route">
+            <router-link :to="link.route" class="link-text">
               <v-list-item>
                 <v-list-item-title v-text="link.name"></v-list-item-title>
               </v-list-item>
@@ -33,8 +34,8 @@
 
       <template v-slot:append>
         <div class="pa-1">
-          <v-btn block class="source-button" color="accent" elevation="2"
-          @click="drawerClick('https://github.com/SuperShadowPlay/personal-site')"> Source Code </v-btn>
+          <v-btn block class="robux-button" color="accent" elevation="2"
+          @click="drawerClick('https://www.youtube.com/watch?v=dQw4w9WgXcQ')">Free Robux</v-btn>
         </div>
       </template>
     </v-navigation-drawer>
@@ -72,6 +73,10 @@ export default {
 </script>
 
 <style scoped>
+a.link-text {
+  text-decoration: none;
+}
+
 img.icons {
   height: 30px;
   margin: 10px;
