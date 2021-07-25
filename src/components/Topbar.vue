@@ -1,26 +1,36 @@
 <template>
   <v-card>
-    <v-app-bar app color="primary" class="mx-auto overflow-hidden" flat extend>
+    <v-toolbar color="primary" class="mx-auto overflow-hidden rounded-0" flat extend>
       <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
-      <v-app-bar-title color=secondary> Trevor's Webspace </v-app-bar-title>
-      <v-spacer></v-spacer>
-      <v-btn class="source-button" color="accent" elevation="2" @click="drawerClick('https://github.com/SuperShadowPlay/personal-site')"> Source Code </v-btn>
-    </v-app-bar>
+      <v-toolbar-title color=secondary> Trevor's Webspace </v-toolbar-title>
+    </v-toolbar>
 
     <v-navigation-drawer v-model="drawer" color="white" app temporary>
       <v-list nav dense>
         <v-list-item-group v-model="group" active-class="deep-purple--text text--accent-4">
+          <v-list-item v-for="link in links" :key="link.name">
+            <v-list-item-title v-text="link.name"></v-list-item-title>
+          </v-list-item>
+          <v-divider></v-divider>
+
           <v-list-item @click="drawerClick('https://www.youtube.com/user/SuperShadowP1ay/')">
-            <img src="../assets/y-icon.svg" class="icons">
+            <img src="../assets/y-icon.svg" class="icons" alt="YouTube Logo">
             <v-list-item-title>YouTube</v-list-item-title>
           </v-list-item>
 
           <v-list-item @click="drawerClick('https://github.com/SuperShadowPlay')">
-            <img src="../assets/github-icon.svg" class="icons"> <br>
+            <img src="../assets/github-icon.svg" class="icons" alt="GitHub Logo"> <br>
             <v-list-item-title>GitHub</v-list-item-title>
           </v-list-item>
         </v-list-item-group>
       </v-list>
+
+      <template v-slot:append>
+        <div class="pa-1">
+          <v-btn block class="source-button" color="accent" elevation="2"
+          @click="drawerClick('https://github.com/SuperShadowPlay/personal-site')"> Source Code </v-btn>
+        </div>
+      </template>
     </v-navigation-drawer>
   </v-card>
 </template>
@@ -36,6 +46,16 @@ export default {
   data: () => ({
     drawer: false,
     group: null,
+    links: [
+      {
+        name: "Blog",
+        route: "/blog"
+      },
+      {
+        name: "Projects",
+        route: "/project"
+      }
+    ]
   }),
   watch: {
     group () {
@@ -47,11 +67,9 @@ export default {
 
 <style scoped>
 img.icons {
-  height: 25px;
-  margin: 15px;
-}
-
-v-app-bar-title {
-  font-size: 1.3em
+  height: 30px;
+  margin: 10px;
+  margin-right: 20px;
+  margin-left: 0px;
 }
 </style>
