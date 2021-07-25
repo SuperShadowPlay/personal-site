@@ -8,9 +8,14 @@
     <v-navigation-drawer v-model="drawer" color="white" app temporary>
       <v-list nav dense>
         <v-list-item-group v-model="group" active-class="deep-purple--text text--accent-4">
-          <v-list-item v-for="link in links" :key="link.name">
-            <v-list-item-title v-text="link.name"></v-list-item-title>
-          </v-list-item>
+          
+          <div class="link-list" v-for="link in links" :key="link.name">
+            <router-link :to="link.route">
+              <v-list-item>
+                <v-list-item-title v-text="link.name"></v-list-item-title>
+              </v-list-item>
+            </router-link>
+          </div>
           <v-divider></v-divider>
 
           <v-list-item @click="drawerClick('https://www.youtube.com/user/SuperShadowP1ay/')">
@@ -22,6 +27,7 @@
             <img src="../assets/github-icon.svg" class="icons" alt="GitHub Logo"> <br>
             <v-list-item-title>GitHub</v-list-item-title>
           </v-list-item>
+
         </v-list-item-group>
       </v-list>
 
@@ -48,12 +54,12 @@ export default {
     group: null,
     links: [
       {
-        name: "Blog",
-        route: "/blog"
+        name: "Home",
+        route: "/"
       },
       {
-        name: "Projects",
-        route: "/project"
+        name: "About",
+        route: "/about"
       }
     ]
   }),

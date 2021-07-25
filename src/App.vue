@@ -1,8 +1,7 @@
 <template>
   <v-app id="app">
     <Topbar/>
-    <h1>Hi, I'm Trevor.</h1>
-    <p>This site is still under construction. Please check back soon.</p>
+    <router-view></router-view>
   </v-app>
 </template>
 
@@ -15,7 +14,7 @@ export default {
     Topbar
   },
   metaInfo: {
-    title: "Trevor's Webspace"
+    title: "Home | Trevor's Webspace"
   }
 }
 </script>
