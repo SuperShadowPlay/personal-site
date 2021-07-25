@@ -1,19 +1,17 @@
 <template>
   <v-card>
-    <v-toolbar color="primary" class="mx-auto overflow-hidden" flat extend app>
+    <v-app-bar app color="primary" class="mx-auto overflow-hidden" flat extend>
       <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
-      <v-toolbar-title color=secondary> Trevor's Webspace </v-toolbar-title>
+      <v-app-bar-title color=secondary> Trevor's Webspace </v-app-bar-title>
       <v-spacer></v-spacer>
-      <a href="https://github.com/SuperShadowPlay/personal-site">
-      <v-btn class="source-button" color="accent" elevation="2"> Source Code </v-btn>
-      </a>
-    </v-toolbar>
+      <v-btn class="source-button" color="accent" elevation="2" @click="drawerClick('https://github.com/SuperShadowPlay/personal-site')"> Source Code </v-btn>
+    </v-app-bar>
 
     <v-navigation-drawer v-model="drawer" color="white" app temporary>
       <v-list nav dense>
         <v-list-item-group v-model="group" active-class="deep-purple--text text--accent-4">
           <v-list-item @click="drawerClick('https://www.youtube.com/user/SuperShadowP1ay/')">
-            <img src="../assets/youtube-icon.svg" class="icons">
+            <img src="../assets/y-icon.svg" class="icons">
             <v-list-item-title>YouTube</v-list-item-title>
           </v-list-item>
 
@@ -51,5 +49,9 @@ export default {
 img.icons {
   height: 25px;
   margin: 15px;
+}
+
+v-app-bar-title {
+  font-size: 1.3em
 }
 </style>
