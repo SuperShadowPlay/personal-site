@@ -6,8 +6,13 @@
 
 <style scoped>
 iframe {
-  max-height: 90vh;
-  min-height: 80vh;
-  width: 400px;
+  height: 90vh;
+  width: 55vh;
+}
+
+@media screen and (max-width: 900px) {
+  iframe {
+    max-width: 100% !important;
+  }
 }
 </style>

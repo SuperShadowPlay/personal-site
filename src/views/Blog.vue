@@ -1,11 +1,15 @@
 <template>
     <v-content>
       <div class="row">
-        <div class="column blog">
-          Placeholder
+        <div class="column a">
+          <div class="blog">
+            Placeholder
+          </div>
         </div>
-        <div class="column mastodon-feed">
-          <Mastodon/>
+        <div class="column b">
+          <div class="mastodon-feed">
+            <Mastodon/>
+          </div>
         </div>
       </div>
     </v-content>
@@ -24,14 +28,39 @@ export default {
 </script>
 
 <style scoped>
+.column {
+  padding: 10px;
+  border: 5px solid blue;
+}
+
 .blog {
   margin: 10px;
-  float: left;
 }
 
 .mastodon-feed {
-  float: right;
-  margin-right: 10px;
-  margin-top: 10px;
+  margin: 10px;
+}
+
+@media screen and (orientation: landscape) {
+  .column {border: 5px solid red}
+  .column.a {
+    width: 70%;
+    float: left;
+  }
+
+  .column.b {
+    width: 30%;
+    float: left;
+  }
+
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  .mastodon-feed {
+    float: right;
+  }
 }
 </style>
