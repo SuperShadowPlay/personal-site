@@ -47,7 +47,8 @@ export default {
   name: 'Topbar',
   methods: {
     drawerClick: function (link) {
-      window.location.href = link;
+      //window.location.href = link;
+      window.open(link, '_blank');
     },
   },
   data: () => ({
@@ -57,6 +58,10 @@ export default {
       {
         name: "Home",
         route: "/"
+      },
+      {
+        name: "Blog",
+        route: "blog"
       },
       {
         name: "About",
