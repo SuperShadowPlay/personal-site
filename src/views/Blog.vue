@@ -30,7 +30,6 @@ export default {
 <style scoped>
 .column {
   padding: 10px;
-  border: 5px solid blue;
 }
 
 .blog {
@@ -42,7 +41,6 @@ export default {
 }
 
 @media screen and (orientation: landscape) {
-  .column {border: 5px solid red}
   .column.a {
     width: 70%;
     float: left;
