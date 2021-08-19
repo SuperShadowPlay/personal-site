@@ -6,7 +6,7 @@
       <v-toolbar-title color=secondary> Trevor's Webspace </v-toolbar-title>
     </v-app-bar>
 
-    <v-navigation-drawer v-model="drawer" color="white" app temporary>
+    <v-navigation-drawer v-model="drawer" app temporary>
       <v-list nav dense>
         <v-list-item-group v-model="group" active-class="deep-purple--text text--accent-4">
           

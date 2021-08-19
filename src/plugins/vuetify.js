@@ -15,8 +15,22 @@ export default new Vuetify({
                 error: '#f44336',
                 warning: '#ffc107',
                 info: '#607d8b',
-                success: '#cddc39'
+                success: '#cddc39',
+                'text-primary-dark': '#ffffff',
+                'text-primary-light': '#000000'
             },
+            dark: {
+                primary: '#16b26a',
+                secondary: '#009688',
+                accent: '#6916b2',
+                accent2: '165fb2',
+                error: '#f44336',
+                warning: '#ffc107',
+                info: '#607d8b',
+                success: '#cddc39',
+                'text-primary-dark': '#ffffff',
+                'text-primary-light': '#000000'
+            }
         },
         options: {
             customProperties: true
