@@ -34,6 +34,7 @@
 
       <template v-slot:append>
         <div class="pa-1">
+          <v-switch class="contrast-switch" v-model="switch1" @click="contraster(this.switch1.toString())" inset color=secondary></v-switch>
           <v-btn block class="robux-button" color="accent" elevation="2"
           @click="drawerClick('https://www.youtube.com/watch?v=dQw4w9WgXcQ')">Free Robux</v-btn>
         </div>
@@ -50,6 +51,10 @@ export default {
       //window.location.href = link;
       window.open(link, '_blank');
     },
+    contraster: function (state) {
+      state
+      alert("hi")
+    }
   },
   data: () => ({
     drawer: false,
@@ -67,7 +72,8 @@ export default {
         name: "About",
         route: "/about"
       }
-    ]
+    ],
+    switch1: false
   }),
   watch: {
     group () {

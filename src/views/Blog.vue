@@ -10,7 +10,7 @@
 <script>
 export default {
   metaInfo: {
-    title: "Home | Trevor's Webspace"
+    title: "Blog | Trevor's Webspace"
   },
 }
 </script>

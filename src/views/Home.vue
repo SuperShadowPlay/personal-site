@@ -23,7 +23,7 @@ export default {
     Mastodon
   },
   metaInfo: {
-    title: "Blog | Trevor's Webspace"
+    title: "Home | Trevor's Webspace"
   }
 }
 </script>
