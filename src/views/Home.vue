@@ -3,13 +3,7 @@
       <div class="row">
         <div class="column a">
           <div class="blog">
-            <!-- Put most recent blog post here -->
-            <h1>Current Project:</h1>
-            <div class="text">
-              <a href="https://github.com/codi-hacks/space-race">Spaceship racer!</a>
-              I am, along with my programming club at John Tyler Community College, creating a spaceship racing game with
-              <a href="https://love2d.org/">Love2D</a>. It is still in early development stages, but I am excited to see where it is headed.
-            </div>
+            <Shelf/>
           </div>
         </div>
         <div class="column b">
@@ -23,9 +17,11 @@
 
 <script>
 import Mastodon from '@/components/Mastodon.vue'
+import Shelf from '@/components/Shelf.vue'
 export default {
   components: {
-    Mastodon
+    Mastodon,
+    Shelf
   },
   metaInfo: {
     title: "Blog | Trevor's Webspace"
@@ -40,10 +36,6 @@ export default {
 
 .blog {
   margin: 10px;
-}
-
-.text {
-  font-size: 1.5em;
 }
 
 .mastodon-feed {
