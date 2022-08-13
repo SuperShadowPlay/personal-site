@@ -1,13 +1,14 @@
 <template>
   <div class="main">
-    <Showcase title="Current Project:">
-      <a href="https://github.com/codi-hacks/space-race">Spaceship racer!</a>
-      I am, along with the people at <a href="https://github.com/codi-hacks">CodiHacks</a>, are creating a spaceship racing game with
-      <a href="https://love2d.org/">Love2D</a>. It is still in early development stages, but I am excited to see where it is headed.
+    <Showcase title="Space Race" image_name="space_race.png" website="https://github.com/codi-hacks/space-race">
+      Spaceship racer!
+      I am, along with the people at <a href="https://github.com/codi-hacks">CodiHacks</a>, created a spaceship racing game with
+      Lua framework <a href="https://love2d.org/">Love2D</a>. It is mostly complete, yet it lacks levels!
+      If you are interested in helping, please open an issue on our GitHub.
     </Showcase>
-    <br/>
-    <Showcase title="Weather Station:">
-      Also in collaboration with my programming co-conspirators, we created a <a href="https://weather.codihacks.org/">weather station web app</a>.
+    <hr/>
+    <Showcase title="Weather Station" image_name="weather_station.png" website="https://weather.codihacks.org/">
+      Also in collaboration with my programming co-conspirators, we created a <a href="https://github.com/codi-hacks/weather-station">weather station web app</a>.
       I cannot take the credit for the station itself, but I had a hand in developing the web app and the API server (in Rust, of course).
     </Showcase>
   </div>

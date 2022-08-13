@@ -1,66 +1,32 @@
 <template>
-    <v-content>
-      <div class="row">
-        <div class="column a">
-          <div class="blog">
-            <Shelf/>
-          </div>
-        </div>
-        <div class="column b">
-          <div class="mastodon-feed">
-            <Mastodon/>
-          </div>
-        </div>
+    <v-main>
+      <div class="body">
+        <Shelf/>
+        <br/>
+        <!-- <img src="https://ghchart.rshah.org/SuperShadowPlay" alt="2016rshah's Github chart" /> -->
       </div>
-    </v-content>
+    </v-main>
 </template>
 
 <script>
-import Mastodon from '@/components/Mastodon.vue'
 import Shelf from '@/components/Shelf.vue'
 export default {
   components: {
-    Mastodon,
     Shelf
   },
   metaInfo: {
-    title: "Blog | Trevor's Webspace"
+    title: "Home | Trevor's Webspace"
   }
 }
 </script>
 
 <style scoped>
-.column {
-  padding: 10px;
-}
+.body {
+  float: center;
+  margin-left: 30px;
+  margin-right: 30px;
+  margin-top: 10px;
+  margin-bottom:50px;
 
-.blog {
-  margin: 10px;
-}
-
-.mastodon-feed {
-  margin: 10px;
-}
-
-@media screen and (orientation: landscape) {
-  .column.a {
-    width: 70%;
-    float: left;
-  }
-
-  .column.b {
-    width: 30%;
-    float: left;
-  }
-
-  .row:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-
-  .mastodon-feed {
-    float: right;
-  }
 }
 </style>

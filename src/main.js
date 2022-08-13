@@ -5,7 +5,6 @@ import VueMeta from 'vue-meta'
 import VueRouter from 'vue-router'
 
 const Home = () => import('./views/Home.vue')
-const Blog = () => import('./views/Blog.vue')
 const About = () => import('./views/About.vue')
 
 Vue.use(VueMeta);
@@ -15,7 +14,6 @@ Vue.config.productionTip = false
 
 const routes = [
   {path: '/', component: Home},
-  {path: '/blog', component: Blog},
   {path: '/about', component: About}
 ]
 
