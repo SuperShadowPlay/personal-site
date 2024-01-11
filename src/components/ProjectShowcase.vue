@@ -18,7 +18,7 @@
 
 <script>
 export default {
-  name: "Showcase",
+  name: "ProjectShowcase",
   props: ["title", "image_name", "website"],
   methods: {
     redirectNewTab: function () {

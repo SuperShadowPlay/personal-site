@@ -14,13 +14,8 @@
   </div>
 </template>
 
-<script>
-import Showcase from '@/components/Showcase.vue'
-export default {
-  components: {
-    Showcase
-  }
-}
+<script setup>
+import Showcase from '@/components/ProjectShowcase.vue'
 </script>
 
 <style scoped>

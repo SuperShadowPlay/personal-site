@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import Shelf from '@/components/Shelf.vue'
+import Shelf from '@/components/ProjectShelf.vue'
 export default {
   components: {
     Shelf

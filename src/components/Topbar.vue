@@ -1,5 +1,5 @@
 <template>
-  <v-card>
+  <v-app>
     <v-app-bar color="primary" class="mx-auto overflow-hidden rounded-0"
     elevate-on-scroll extend>
       <v-app-bar-nav-icon @click.stop="drawer = !drawer"></v-app-bar-nav-icon>
@@ -8,28 +8,26 @@
 
     <v-navigation-drawer v-model="drawer" color="white" app temporary>
       <v-list nav dense>
-        <v-list-item-group v-model="group" active-class="deep-purple--text text--accent-4">
           
-          <div class="link-list" v-for="link in links" :key="link.name">
-            <router-link :to="link.route" class="link-text">
-              <v-list-item>
-                <v-list-item-title v-text="link.name"></v-list-item-title>
-              </v-list-item>
-            </router-link>
-          </div>
-          <v-divider></v-divider>
+        <div class="link-list" v-for="link in links" :key="link.name">
+          <router-link :to="link.route" class="link-text">
+            <v-list-item>
+              <v-list-item-title v-model="link.name"></v-list-item-title>
+            </v-list-item>
+          </router-link>
+        </div>
+        <v-divider></v-divider>
 
-          <v-list-item @click="drawerClick('https://www.youtube.com/user/SuperShadowP1ay/')">
-            <img src="../assets/y-icon.svg" class="icons" alt="YouTube Logo">
-            <v-list-item-title>YouTube</v-list-item-title>
-          </v-list-item>
+        <v-list-item @click="drawerClick('https://www.youtube.com/user/SuperShadowP1ay/')">
+          <img src="../assets/y-icon.svg" class="icons" alt="YouTube Logo">
+          <v-list-item-title>YouTube</v-list-item-title>
+        </v-list-item>
 
-          <v-list-item @click="drawerClick('https://github.com/SuperShadowPlay')">
-            <img src="../assets/github-icon.svg" class="icons" alt="GitHub Logo"> <br>
-            <v-list-item-title>GitHub</v-list-item-title>
-          </v-list-item>
+        <v-list-item @click="drawerClick('https://github.com/SuperShadowPlay')">
+          <img src="../assets/github-icon.svg" class="icons" alt="GitHub Logo"> <br>
+          <v-list-item-title>GitHub</v-list-item-title>
+        </v-list-item>
 
-        </v-list-item-group>
       </v-list>
 
       <template v-slot:append>
@@ -39,38 +37,18 @@
         </div>
       </template>
     </v-navigation-drawer>
-  </v-card>
+  </v-app>
 </template>
 
-<script>
-export default {
-  name: 'Topbar',
-  methods: {
-    drawerClick: function (link) {
-      //window.location.href = link;
-      window.open(link, '_blank');
-    },
-  },
-  data: () => ({
-    drawer: false,
-    group: null,
-    links: [
-      {
-        name: "Home",
-        route: "/"
-      },
-      {
-        name: "About",
-        route: "/about"
-      }
-    ]
-  }),
-  watch: {
-    group () {
-      this.drawer = false
-    },
-  },
+<script setup>
+import { ref } from 'vue';
+
+function drawerClick(link) {
+  window.open(link, '_blank');
 }
+
+const drawer = ref(false);
+
 </script>
 
 <style scoped>
