@@ -1,0 +1,19 @@
+[project]
+name = "personal-site"
+version = "0.1.0"
+description = "A Flask website that displays things I find meaningful"
+authors = [
+    {name = "SuperShadowPlay",email = "supershadowplay@gmail.com"}
+]
+license = {text = "GPL 3.0"}
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "flask (>=3.1.0,<4.0.0)"
+]
+package-mode = false
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
